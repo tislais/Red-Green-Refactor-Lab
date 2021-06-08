@@ -7,11 +7,6 @@ export function copyAndPush(array, number) {
 }
 
 export function capitalizeAndFilter(arr) {
-  const newArr = [];
-  for(const string of arr) {
-    if(!string.startsWith('f') && !string.startsWith('F')) {
-      newArr.push(string[0].toUpperCase() + string.slice(1));
-    }
-  }
-  return newArr;
+  const newArr = arr.filter(string => !string.startsWith('f') && !string.startsWith('F'));
+  return newArr.map(string => string.toUpperCase());
 }

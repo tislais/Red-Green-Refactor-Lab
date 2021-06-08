@@ -37,6 +37,6 @@ describe('capitalizeAndFilter', () => {
       'strings',
       'function'
     ];
-    expect(capitalizeAndFilter(arrayOfStrings)).toEqual(['Array', 'Of', 'Strings']);
+    expect(capitalizeAndFilter(arrayOfStrings)).toEqual(['ARRAY', 'OF', 'STRINGS']);
   });
 });
