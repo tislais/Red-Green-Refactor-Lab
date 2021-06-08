@@ -1,4 +1,4 @@
-import getName from './ctlab01';
+import { getName, copyAndPush } from './ctlab01';
 
 describe('getName function', () => {
   it('gets the name spot from an object', () => {
