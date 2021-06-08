@@ -1,4 +1,4 @@
-import { getName, copyAndPush, capitalizeAndFilter } from './ctlab01';
+import { getName, copyAndPush, capitalizeAndFilter, fetchQuote } from './ctlab01';
 
 describe('getName function', () => {
 
@@ -29,6 +29,7 @@ describe('copyAndPush function', () => {
 });
 
 describe('capitalizeAndFilter', () => {
+
   it('takes an array of strings, capitalizes all strings, and filters out any string that starts with the letter F/f', () => {
     const arrayOfStrings = [
       'Funny',
@@ -38,5 +39,17 @@ describe('capitalizeAndFilter', () => {
       'function'
     ];
     expect(capitalizeAndFilter(arrayOfStrings)).toEqual(['ARRAY', 'OF', 'STRINGS']);
+  });
+
+});
+
+describe('fetchQuote', () => {
+  it('Uses the Futurama Quote API to return a single formatted quote', async () => {
+    const fetchedQuote = await fetchQuote();
+    expect(fetchedQuote).toEqual({ 
+      'name':'Bender',
+      'text':'Bite my shiny metal ass.', 
+      'image':'https://res.cloudinary.com/dzxqhkyqd/image/fetch/c_scale,w_500/https://res.cloudinary.com/dzxqhkyqd/image/upload/v1552429540/bender.png' 
+    });
   });
 });
