@@ -1,3 +1,3 @@
 export default (getName) => {
-  return getName['name'];
+  return getName.name;
 };
